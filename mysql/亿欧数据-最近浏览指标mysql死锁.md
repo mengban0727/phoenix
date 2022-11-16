@@ -41,8 +41,10 @@ org.springframework.dao.DeadlockLoserDataAccessException:
 ### 业务背景
 
 ```java
-用户点击左侧指标，mysql中记录日志，会记录点击的图表chart_id和更新时间，status记录日志的状态，用户可以手动删除，重复点击相同的指标会对时间进行更新。
-  页面按照时间展示最近20条浏览的指标，且用户删除一条记录后展示的数量会减少，因此表中最多存在20条status=1正常的数据。
+用户点击左侧指标，mysql中记录日志，会记录点击的图表chart_id和更新时间，
+status记录日志的状态，用户可以手动删除，重复点击相同的指标会对时间进行更新。
+页面按照时间展示最近20条浏览的指标，且用户删除一条记录后展示的数量会减少，
+因此表中最多存在20条status=1正常的数据。
 ```
 
 ![image-20221115171147779](../images/image-20221115171147779.png)
@@ -105,7 +107,7 @@ update index_log set updated_at = #{dateTime} where id = #{id}
 ## 程序代码2
 
 ```java
-//如果是新增指标浏览记录，只保留20条status=1的日志记录，按照更新时间正序更新status状态
+//新增、更新指标浏览记录之后，只保留20条status=1的日志记录，按照更新时间正序更新status=-1
 
 Integer userId = Integer.parseInt(AuthContext.getUserId());
 LambdaQueryWrapper<IndexLog> queryWrapper = Wrappers.lambdaQuery();
@@ -159,6 +161,8 @@ WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
 
 ```mysql
 select @@tx_isolation;
+
+READ-COMMITTED
 ```
 
 
@@ -190,7 +194,7 @@ WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
 ### 4.加锁分析
 
 ```sql
-由于order by updated_at没有走索引 idx_creator_id_status_created_at（`creator_id`, `status`, `created_at`），
+由于order by updated_at没有走索引idx_creator_id_status_created_at（`creator_id`, `status`, `created_at`），
 排序的时候会进行回表，按照对扫描到的行进行加锁的规则，会对idx_creator_id_status_created_at索引上20条记录和主键上的20条记录都进行加锁
 又因为事务A持有一条主键id=6281的记录锁，因此阻塞等待
 
