@@ -170,8 +170,7 @@ READ-COMMITTED
 
 ```sql
 update index_log set updated_at = '2022-11-14 16:33:38.567' where id = 6281;
-
-此时对主键id为6281这行记录进行加锁
+--此时对主键id为6281这行记录进行加锁
 ```
 
 
@@ -181,7 +180,6 @@ update index_log set updated_at = '2022-11-14 16:33:38.567' where id = 6281;
 ```sql
 UPDATE index_log  SET status=-1,updated_at='2022-11-14 16:33:38.567'  
 WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
-
 ```
 
 ### 3.查看事务B第2条语句执行计划
@@ -195,8 +193,7 @@ WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
 排序的时候会进行回表，按照对扫描到的行进行加锁的规则，会对idx_creator_id_status_created_at索引上20条记录和主键上的20条记录都进行加锁
 又因为事务A持有一条主键id=6281的记录锁，因此阻塞等待
 
----非聚簇索引的加锁规则先在索引记录加锁，然后去聚簇索引加锁。
-
+-- 非聚簇索引的加锁规则先在索引记录加锁，然后去聚簇索引加锁。
 ```
 
 ### 5.事务A第二条更新语句加锁
@@ -266,9 +263,7 @@ Record lock, heap no 150 PHYSICAL RECORD: n_fields 4; compact format; info bits 
 
 ## 猜测用户行为2
 
-```java
 用户连续多次不同的指标，有表中已存在的记录，也有不存在的记录
-```
 
 |      | 第一次点击 事务A                                             | 第二次点击 事务B                                             | 第三次点击事务C                                              |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -292,18 +287,16 @@ Record lock, heap no 150 PHYSICAL RECORD: n_fields 4; compact format; info bits 
 
 ### 再分析
 
-```sql
 1.因为rds的默认隔离级别是rc读已提交，所以事务B和事务C，代码if (currCount > 20) 查询是成立的。
 
 2.分析死锁时，可以只看事务B和事务C，关键点在于事务B的第二条更新语句为什么会被事务C的第一条更新语句阻塞？
 
-```
-
 ### 查看事务B第二条语句等待的锁
 
 ```sql
-lock_index:idx_creator_id_status_created_at
-lock_data:23,1,23, 1, 0x6344CBE7, 6281   其中0x6344CBE7换算成时间2022-11-14 16:33:38.567
+lock_index: idx_creator_id_status_created_at
+lock_data: 23,1,23, 1, 0x6344CBE7, 6281
+--其中0x6344CBE7换算成时间2022-11-14 16:33:38.567
 ```
 
 
@@ -314,19 +307,13 @@ lock_data:23,1,23, 1, 0x6344CBE7, 6281   其中0x6344CBE7换算成时间2022-11-
 
 ### 解决方法
 
-```sql
 由于排序filesort,会扫描索引上20条记录，同时回表会对主键上的记录进行加锁，因此更改索引为idx_creator_id_status_created_at（`creator_id`, `status`, `updated_at`），此时ORDER BY updated_at ASC limit 1 就只对索引记录的第一条和主键上的记录进行加锁
-```
-
-
 
 ### 更改索引后还是会有死锁问题
 
-```mysql
 百思不得其解,按照道理来说这条语句UPDATE index_log SET status=-1,updated_at='2022-11-14 16:33:38.567'  WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1，trx_rows_locked锁住的记录数就是索引记录和主键上的记录，但还是会阻塞等待。
 
 又是困扰中............
-```
 
 ### 再看看执行计划
 
@@ -336,19 +323,15 @@ lock_data:23,1,23, 1, 0x6344CBE7, 6281   其中0x6344CBE7换算成时间2022-11-
 
 ### mysql 5.6版本问题
 
-```
 从执行计划可以看到，查询语句能够利用索引进行排序，但是更新语句还是有filesort,因此推测还是会扫描20条记录回表排序，加锁的范围没有变小。
-```
 
 
 
 ### 解决办法
 
-```sql
 1. mysql换成更高版本5.7
 2. 改写语句，由于更改索引后，默认是按照updated_at升序，不需要再指定order by updated_at asc
 UPDATE index_log SET status=-1,updated_at='2022-11-14 16:33:38.567'  WHERE (creator_id = 205 AND status = 1) limit 1
-```
 
 
 
