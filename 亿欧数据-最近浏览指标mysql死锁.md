@@ -45,17 +45,17 @@ org.springframework.dao.DeadlockLoserDataAccessException:
   页面按照时间展示最近20条浏览的指标，且用户删除一条记录后展示的数量会减少，因此表中最多存在20条status=1正常的数据。
 ```
 
-![image-20221115171147779](images\image-20221115171147779.png)
+![image-20221115171147779](./images/image-20221115171147779.png)
 
 
 
 ### 表结构
 
-![image-20221115170202689](images\image-20221115170202689.png)
+![image-20221115170202689](./images/image-20221115170202689.png)
 
 ### 索引
 
-![image-20221115170224826](images\image-20221115170224826.png)
+![image-20221115170224826](./images/image-20221115170224826.png)
 
 
 
@@ -185,7 +185,7 @@ WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
 
 ### 3.查看事务B第2条语句执行计划
 
-![image-20221115181819887](images\image-20221115181819887.png)
+![image-20221115181819887](./images/image-20221115181819887.png)
 
 ### 4.加锁分析
 
@@ -307,7 +307,7 @@ lock_data:23,1,23, 1, 0x6344CBE7, 6281   其中0x6344CBE7换算成时间2022-11-
 
 
 
-![image-20221115194316146](images\image-20221115194316146.png)
+![image-20221115194316146](./images/image-20221115194316146.png)
 
 
 
@@ -329,9 +329,9 @@ lock_data:23,1,23, 1, 0x6344CBE7, 6281   其中0x6344CBE7换算成时间2022-11-
 
 ### 再看看执行计划
 
-![image-20221115215443258](images\image-20221115215443258.png)
+![image-20221115215443258](./images/image-20221115215443258.png)
 
-![image-20221115215643482](images\image-20221115215643482.png)
+![image-20221115215643482](./images/image-20221115215643482.png)
 
 ### mysql 5.6版本问题
 
