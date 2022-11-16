@@ -6,7 +6,7 @@
 
 ## Mysql
 #### 死锁
-* [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/mysql/blob/master/亿欧数据-最近浏览指标mysql死锁.md)
+* [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧数据-最近浏览指标mysql死锁.md)
 
 ## Java
 #### 多线程
