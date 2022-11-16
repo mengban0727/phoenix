@@ -4,7 +4,7 @@
 
 **不积跬步，无以至千里；不积小流，无以成江海**
 
-## Mysql
+## MySql
 #### 死锁
 * [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧数据-最近浏览指标mysql死锁.md)
 
