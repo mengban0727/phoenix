@@ -188,20 +188,18 @@ WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
 
 ### 4.加锁分析
 
-```sql
 由于order by updated_at没有走索引idx_creator_id_status_created_at（`creator_id`, `status`, `created_at`），
 排序的时候会进行回表，按照对扫描到的行进行加锁的规则，会对idx_creator_id_status_created_at索引上20条记录和主键上的20条记录都进行加锁
 又因为事务A持有一条主键id=6281的记录锁，因此阻塞等待
 
--- 非聚簇索引的加锁规则先在索引记录加锁，然后去聚簇索引加锁。
-```
+> 非聚簇索引的加锁规则先在索引记录加锁，然后去聚簇索引加锁。
 
 ### 5.事务A第二条更新语句加锁
 
 ``` sql
 UPDATE index_log  SET status=-1,updated_at='2022-11-14 16:33:38.567'  
  WHERE (creator_id = 205 AND status = 1) ORDER BY updated_at ASC limit 1
-同样的会对idx_creator_id_status_created_at索引上20条记录和主键上的20条记录都进行加锁，产生死锁
+--同样的会对idx_creator_id_status_created_at索引上20条记录和主键上的20条记录都进行加锁，产生死锁
 ```
 
 
