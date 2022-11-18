@@ -335,8 +335,8 @@ UPDATE index_log SET status=-1,updated_at='2022-11-14 16:33:38.567'  WHERE (crea
 
 ### 实验附加相关sql
 
-```mysql
-SESSION1:
+```sql
+--SESSION1:
 begin;
 update index_log set updated_at = '2022-11-14 16:33:38.527' where id = 6280;
 UPDATE index_log  SET status=-1,updated_at='2022-11-14 16:33:38.567'  
@@ -345,7 +345,7 @@ ROLLBACK;
 -- select version()
 -- select * from index_log where (creator_id = 23 AND status = 1 ) ORDER BY updated_at ASC  limit 1 for update
 
-SESSION2:
+--SESSION2:
 begin;
 update index_log set updated_at = '2022-11-14 16:33:38.567' where id = 6281;
 UPDATE index_log  SET status=-1,updated_at='2022-11-14 16:33:38.593'  
@@ -353,13 +353,13 @@ WHERE (creator_id = 23 AND status = 1)  ORDER BY updated_at ASC limit 1
 ROLLBACK;
 -- select updated_at from index_log where creator_id = 23 AND status = 1 AND updated_at = '2022-10-11 09:50:31' for update
 
-SESSION3:
+--SESSION3:
 select*from information_schema.innodb_locks;
 
-SESSION4:
+--SESSION4:
 show engine innodb status
 
-SESSION5:
+--SESSION5:
 select*from information_schema.innodb_trx;
 ```
 
