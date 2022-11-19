@@ -332,9 +332,9 @@ public class BinlogMessageQueue extends Thread {
   }
 
   /**
-   1. 循环从队列中获取任务执行 workQueue.take()
+   1. workQueue.take() 循环从队列中获取任务执行 
    2. 拿到binlog消息后按照删除、新增或者更新来进行分类
-   3. 分类后处理数据 messageHandler.handleMessageBatch
+   3. messageHandler.handleMessageBatch 分类后处理数据 
    4. 最后调用complte完成任务，结束get等待
   */
   @Override
