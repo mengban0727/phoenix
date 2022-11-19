@@ -13,5 +13,9 @@
 * [亿欧网-多线程增量同步数据优化](https://gitee.com/mengban0727/blog/blob/master/java/亿欧网-多线程增量同步数据优化.md)
 * [CompletableFuture实际落地场景](https://gitee.com/mengban0727/blog/blob/master/java/CompletableFuture实际落地场景.md)
 
+## ElasticSearch
+* [线上es不能写入到数据建模.md](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入到数据建模.md)
+
+
 ## 联系我
 欢迎探讨其他技术相关的问题，个人邮箱：**1103820783@qq.com**
