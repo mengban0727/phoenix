@@ -20,10 +20,10 @@
 
 * GET _cat/allocation?v 查看每个节点的使用情况，发现其中一个节点使用率快满了，另外两个节点还有一些空间，推测应该是索引分片设置不合理导致数据分配不均衡
 ```java
-  shards disk.indices disk.used disk.avail disk.total disk.percent host       node
-      36       43.2gb    46.8gb      2.7gb     49.5gb           95    es-cn-tl32mh5zu000oix2x-7f05b6b5-0001
-      35        18.8gb    20.8gb      28.7gb     49.5gb        42    es-cn-tl32mh5zu000oix2x-7f05b6b5-0002
-      36       39.3gb    41.9gb      7.6gb    49.5gb          85    es-cn-tl32mh5zu000oix2x-7f05b6b5-0003
+  shards disk.indices disk.used disk.avail disk.total disk.percent        node
+    36     43.2gb      46.8gb      2.7gb    49.5gb      95    es-cn-tl32mh5zu000oix2x-7f05b6b5-0001
+    35     18.8gb      20.8gb      28.7gb   49.5gb      42    es-cn-tl32mh5zu000oix2x-7f05b6b5-0002
+    36     39.3gb      41.9gb      7.6gb    49.5gb      85    es-cn-tl32mh5zu000oix2x-7f05b6b5-0003
 
 ```
 * GET _cat/shards 通过kibana查看每个索引在节点上的具体分片，发现情报索引只有一个shard，并且占用了主要的空间
@@ -116,8 +116,8 @@ GET _tasks?detailed=true&actions=*reindex
 
 4. 分片设置
    	如果索引数据量小，可设置为1个分片；
-   	对于数据量稍大的索引，目前设置为3个。（100g以内的数据一般设置3~5个分片）
-   	数据量大100g以上，单个分片控制（10g-30g）（20g-50g），分片数过多进一步拆分成多个index
+      	对于数据量稍大的索引，目前设置为3个。（100g以内的数据一般设置3~5个分片）
+      	数据量大100g以上，单个分片控制（10g-30g）（20g-50g），分片数过多进一步拆分成多个index
 
 5. index.max_result_window设置
    	创建索引时,默认为1w，所以经常出现"翻最后一页无数据的情况",后面创建索引时，统一更改为10w
