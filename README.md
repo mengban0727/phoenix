@@ -12,7 +12,7 @@
 * [CompletableFuture实际落地场景](https://gitee.com/mengban0727/blog/blob/master/java/CompletableFuture实际落地场景.md)
 
 ## Redis
-* [亿欧网-缓存一直性问题](https://gitee.com/mengban0727/blog/blob/master/redis/亿欧网-缓存一直性问题.md)
+* [亿欧网-缓存一致性问题](https://gitee.com/mengban0727/blog/blob/master/redis/亿欧网-缓存一致性问题.md)
 
 
 ## ElasticSearch
