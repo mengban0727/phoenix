@@ -11,6 +11,10 @@
 * [亿欧网-多线程增量同步数据优化](https://gitee.com/mengban0727/blog/blob/master/java/亿欧网-多线程增量同步数据优化.md)
 * [CompletableFuture实际落地场景](https://gitee.com/mengban0727/blog/blob/master/java/CompletableFuture实际落地场景.md)
 
+## Redis
+* [亿欧网-缓存一直性问题](https://gitee.com/mengban0727/blog/blob/master/redis/亿欧网-缓存一直性问题.md)
+
+
 ## ElasticSearch
 * [线上es不能写入到数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入到数据建模.md)
 
