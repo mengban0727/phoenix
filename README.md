@@ -16,7 +16,7 @@
 
 
 ## ElasticSearch
-* [线上es不能写入到数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入到数据建模.md)
+* [线上es不能写入数据-规范数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入数据-规范数据建模.md)
 
 ## 设计模式
 * [模板方法去掉重复代码](https://gitee.com/mengban0727/blog/blob/master/设计模式/模板方法去掉重复代码.md)
