@@ -31,7 +31,7 @@ ORDER BY
 	LIMIT 0,20
 ```
 
-crm_news_flash_field_tag表在tag_id列建有索引
+crm_news_flash_field_tag表在news_flash_id列建有索引
 
 crm_news_flash表主键为id，pubdate字段上有索引
 
