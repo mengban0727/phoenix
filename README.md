@@ -16,7 +16,7 @@
 ## Redis
 * [亿欧网-缓存一致性问题](https://gitee.com/mengban0727/blog/blob/master/redis/亿欧网-缓存一致性问题.md)
 
-## ElasticSearch
+## Elasticsearch
 * [线上文章搜索自定义评分-衰减函数](https://gitee.com/mengban0727/blog/blob/master/es/线上文章搜索自定义评分-衰减函数.md)
 * [线上es不能写入数据-规范数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入数据-规范数据建模.md)
 
