@@ -7,6 +7,7 @@
 * [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧数据-最近浏览指标mysql死锁.md)
 #### sql优化
 * [亿欧网-sql执行选错驱动表](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-sql执行选错驱动表.md)
+* [亿欧网-用子查询优化慢sql](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-用子查询优化慢sql.md)
 
 ## Java
 #### 多线程
