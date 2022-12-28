@@ -39,7 +39,7 @@ crm_user_behavior：用户行为表，记录用户在网页上对内容的一些
 
 ## 优化前执行计划
 
-![](C:\iyiou\GitHubRepository\blog\images\mysql_20221228212446.png)
+![](../images/mysql_20221228212446.png)
 
 执行计划分析：
 
