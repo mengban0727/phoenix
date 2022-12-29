@@ -96,3 +96,9 @@ ORDER BY
 crm_news_flash_field_tag 添加索引index_tag_id(`tag_id`, `status`, `news_flash_id`)，被驱动表上能够利用索引进行条件筛选，让优化器选择crm_news_flash表作为驱动表进行查询
 
 ![](../images/mysql_20221222220557.png)
+
+## 优化后执行时间
+
+几ms
+
+![](../images/mysql_20221229200251.png)
