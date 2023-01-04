@@ -8,6 +8,7 @@
 #### sql优化
 * [亿欧网-sql执行选错驱动表](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-sql执行选错驱动表.md)
 * [亿欧网-用子查询优化慢sql](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-用子查询优化慢sql.md)
+* [亿欧网-使用mybatis动态sql需要考虑sql执行顺序](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-使用mybatis动态sql需要考虑sql执行顺序.md)
 
 ## Java
 #### 多线程
