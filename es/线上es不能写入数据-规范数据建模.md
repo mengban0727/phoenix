@@ -71,6 +71,7 @@ PUT /dp_intellegence_new/_settings
 
 // 获取 reindex 相关任务
 GET _tasks?detailed=true&actions=*reindex
+GET /_tasks/jj_8bfVtQpuwztDgY7YuNQ:6910244
 
 ```
 
