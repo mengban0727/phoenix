@@ -49,7 +49,7 @@ POST _reindex?slices=3&wait_for_completion=false
 {
     "conflicts": "proceed",
     "source": {
-        "index": "dp_intellegence",
+        "index": "dp_intellegence_1024",
         "size":2000
     },
     "dest": {
@@ -71,6 +71,32 @@ PUT /dp_intellegence_new/_settings
 
 // 获取 reindex 相关任务
 GET _tasks?detailed=true&actions=*reindex
+GET /_tasks/jj_8bfVtQpuwztDgY7YuNQ:6910244
+
+// 切换别名
+POST _aliases
+{
+  "actions": [
+    {
+      "add": {
+        "index": "dp_intellegence_new",
+        "alias": "dp_intellegence"
+      }
+    }
+  ]
+}
+
+POST _aliases
+{
+  "actions": [
+    {
+      "remove": {
+        "index": "dp_intellegence_1024",
+        "alias": "dp_intellegence"
+      }
+    }
+  ]
+}
 
 ```
 
