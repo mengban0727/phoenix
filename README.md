@@ -22,6 +22,7 @@
 * [线上文章搜索自定义评分-衰减函数](https://gitee.com/mengban0727/blog/blob/master/es/线上文章搜索自定义评分-衰减函数.md)
 * [线上es不能写入数据-规范数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入数据-规范数据建模.md)
 * [实现需求字段值为空排在前面](https://gitee.com/mengban0727/blog/blob/master/es/实现需求字段值为空排在前面.md)
+* [线上企业搜索不准](https://gitee.com/mengban0727/blog/blob/master/es/线上企业搜索不准.md)
 
 ## 设计模式
 * [模板方法去掉重复代码](https://gitee.com/mengban0727/blog/blob/master/设计模式/模板方法去掉重复代码.md)
