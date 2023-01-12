@@ -183,3 +183,10 @@ LIMIT 0, 20
 
 这时全索引扫描反而不如优化前的临时表+文件排序性能
 
+
+
+## 关联查询解决方案
+
+1. 将文章和tag存储到es的宽表，tag作为数组或者nested结构，通过es的倒排索引。（类似mongodb也可以）
+2. 利用redis的zset来实现，以tag_id作为key，value存储文章的id，score存储需要排序的字段，from+size查询出一批文章id，去数据库里面查询详情
+
