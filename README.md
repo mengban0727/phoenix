@@ -2,6 +2,12 @@
 
 **blog**记录平时工作中遇到的问题，解决方案
 
+## Elasticsearch
+* [线上文章搜索自定义评分-衰减函数](https://gitee.com/mengban0727/blog/blob/master/es/线上文章搜索自定义评分-衰减函数.md)
+* [线上es不能写入数据-规范数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入数据-规范数据建模.md)
+* [实现需求字段值为空排在前面](https://gitee.com/mengban0727/blog/blob/master/es/实现需求字段值为空排在前面.md)
+* [线上企业搜索不准优化](https://gitee.com/mengban0727/blog/blob/master/es/线上企业搜索不准优化.md)
+
 ## MySql
 #### 死锁
 * [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧数据-最近浏览指标mysql死锁.md)
@@ -9,12 +15,6 @@
 * [亿欧网-sql执行选错驱动表](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-sql执行选错驱动表.md)
 * [亿欧网-用子查询优化慢sql](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-用子查询优化慢sql.md)
 * [亿欧网-使用mybatis动态sql需要考虑sql执行顺序](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-使用mybatis动态sql需要考虑sql执行顺序.md)
-
-## Elasticsearch
-* [线上文章搜索自定义评分-衰减函数](https://gitee.com/mengban0727/blog/blob/master/es/线上文章搜索自定义评分-衰减函数.md)
-* [线上es不能写入数据-规范数据建模](https://gitee.com/mengban0727/blog/blob/master/es/线上es不能写入数据-规范数据建模.md)
-* [实现需求字段值为空排在前面](https://gitee.com/mengban0727/blog/blob/master/es/实现需求字段值为空排在前面.md)
-* [线上企业搜索不准优化](https://gitee.com/mengban0727/blog/blob/master/es/线上企业搜索不准优化.md)
 
 ## Java
 #### 多线程
