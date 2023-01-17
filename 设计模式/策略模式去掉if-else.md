@@ -1,4 +1,4 @@
-## 应用1
+## 背景
 
 亿欧后台采用k8s部署应用在阿里云上，需要执行一些任务时，使用k8s中的job方式，在控制台手动创建pod任务来执行，执行完任务后释放出资源。不同的任务逻辑写在同一个应用中，根据应用启动时传递的命令参数不同来执行对应的任务，使用策略模式
 
@@ -85,7 +85,7 @@ public class TopicStrategyCommand implements Command {
 }
 ```
 
-## 策略实现类注入到Map
+## 策略实现类注入到工厂的map中
 
 有多种方式，从spring容器中拿到所有的策略实现类，根据不同的命令传参，执行不同的任务。
 
@@ -93,8 +93,32 @@ public class TopicStrategyCommand implements Command {
 2. 利用容器感知ApplicationContextAware接口拿到applicationContext从容器中获取
 
 ```java
+@Component
+public class CommandFactory {
+
+  @Resource
+  private Map<String, Command> commandMap;
+
+  /**
+   * 工厂方法
+   */
+  public int execute(String... args) {
+    if (!commandMap.containsKey(args[0])) {
+        log.error("'{}' command not found", args[0]);
+       return -1;
+    }
+    Command command = commandMap.get(args[0]);
+    String[] arguments = Arrays.copyOfRange(args, 1, args.length);
+    return command.execute(arguments);
+  }
+}
+```
+
+实际调用
+
+```java
 @Resource
-private  Map<String, Command> commandMap;
+private  CommandFactory commandFactory;
 
 @Override
 public void run(String... args) {
@@ -102,22 +126,9 @@ public void run(String... args) {
         log.error("command not found");
         System.exit(-1);
     }
-
-    if (!commandMap.containsKey(args[0])) {
-        log.error("'{}' command not found", args[0]);
-        System.exit(-1);
-    }
-    Command command = commandMap.get(args[0]);
-    String[] arguments = Arrays.copyOfRange(args, 1, args.length);
-    System.exit(command.execute(arguments));
+    System.exit(commandFactory.execute(arguments));
 }
 ```
-
-
-
-## 应用2
-
-
 
 ## 参考
 
