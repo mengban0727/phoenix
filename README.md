@@ -22,6 +22,7 @@
 * [CompletableFuture实际落地场景](https://gitee.com/mengban0727/blog/blob/master/java/CompletableFuture实际落地场景.md)
 #### 设计模式
 * [模板方法去掉重复代码](https://gitee.com/mengban0727/blog/blob/master/设计模式/模板方法去掉重复代码.md)
+* [模板方法+泛型优化代码](https://gitee.com/mengban0727/blog/blob/master/设计模式/模板方法+泛型优化代码.md)
 * [策略模式去掉if-else](https://gitee.com/mengban0727/blog/blob/master/设计模式/策略模式去掉if-else.md)
 
 ## Redis
