@@ -9,12 +9,12 @@
 * [线上企业搜索不准优化](https://gitee.com/mengban0727/blog/blob/master/es/线上企业搜索不准优化.md)
 
 ## MySql
-#### 死锁
-* [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧数据-最近浏览指标mysql死锁.md)
 #### sql优化
 * [亿欧网-sql执行选错驱动表](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-sql执行选错驱动表.md)
 * [亿欧网-用子查询优化慢sql](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-用子查询优化慢sql.md)
 * [亿欧网-使用mybatis动态sql需要考虑sql执行顺序](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧网-使用mybatis动态sql需要考虑sql执行顺序.md)
+#### 死锁
+* [亿欧数据-最近浏览指标mysql死锁](https://gitee.com/mengban0727/blog/blob/master/mysql/亿欧数据-最近浏览指标mysql死锁.md)
 
 ## Java
 #### 多线程
