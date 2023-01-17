@@ -53,7 +53,7 @@ GET dp_intelligence_query/_search
 
 
 
-## keyword 存储浮点数/整数聚合
+## keyword 存储浮点数/整数聚合求max，min，avg
 
 keyword设置index：false
 
