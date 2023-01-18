@@ -94,7 +94,7 @@ public class TopicStrategyCommand implements Command {
 
 ```java
 @Component
-public class CommandFactory {
+public class CommandFactory implements Command{
 
   @Resource
   private Map<String, Command> commandMap;
@@ -102,6 +102,7 @@ public class CommandFactory {
   /**
    * 工厂方法
    */
+  @Override
   public int execute(String... args) {
     if (!commandMap.containsKey(args[0])) {
         log.error("'{}' command not found", args[0]);
