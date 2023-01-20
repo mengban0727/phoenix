@@ -189,4 +189,8 @@ LIMIT 0, 20
 
 1. 将文章和tag存储到es的宽表，tag作为数组或者nested结构，通过es的倒排索引。（类似mongodb也可以）
 2. 利用redis的zset来实现，以tag_id作为key，value存储文章的id，score存储需要排序的字段，from+size查询出一批文章id，去数据库里面查询详情
+3. 利用高版本mysql json数组类型，存储标签
 
+## 参考
+
+[MYSQL实战宝典-非结构存储](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/MySQL%E5%AE%9E%E6%88%98%E5%AE%9D%E5%85%B8/04%20%20%E9%9D%9E%E7%BB%93%E6%9E%84%E5%AD%98%E5%82%A8%EF%BC%9A%E7%94%A8%E5%A5%BD%20JSON%20%E8%BF%99%E5%BC%A0%E7%89%8C.md)
