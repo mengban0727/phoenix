@@ -26,7 +26,7 @@
 * [模板方法+泛型优化代码](https://gitee.com/mengban0727/blog/blob/master/设计模式/模板方法+泛型优化代码.md)
 * [策略模式去掉if-else](https://gitee.com/mengban0727/blog/blob/master/设计模式/策略模式去掉if-else.md)
 
-## Redis
+## 方案
 * [亿欧网-缓存一致性问题](https://gitee.com/mengban0727/blog/blob/master/redis/亿欧网-缓存一致性问题.md)
 
 ## 联系我
