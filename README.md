@@ -28,6 +28,7 @@
 
 ## 方案
 * [亿欧网-缓存一致性问题](https://gitee.com/mengban0727/blog/blob/master/redis/亿欧网-缓存一致性问题.md)
+* [亿欧后台-长连接分享](https://gitee.com/mengban0727/blog/blob/master/方案设计/长连接分享.md)
 
 ## 联系我
 欢迎探讨其他技术相关的问题，个人邮箱：**1103820783@qq.com**
