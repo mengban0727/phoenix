@@ -1,6 +1,6 @@
 ## 关于
 
-**blog**记录平时工作中遇到的问题，解决方案
+**phenix**记录平时工作中遇到的问题，解决方案
 
 ## Elasticsearch
 * [线上文章搜索自定义评分-衰减函数](https://gitee.com/mengban0727/blog/blob/master/es/线上文章搜索自定义评分-衰减函数.md)
