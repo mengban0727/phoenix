@@ -21,7 +21,7 @@
 * [亿欧网-多线程增量同步数据优化](https://gitee.com/mengban0727/phenix/blob/master/java/亿欧网-多线程增量同步数据优化.md)
 * [CompletableFuture实际落地场景](https://gitee.com/mengban0727/phenix/blob/master/java/CompletableFuture实际落地场景.md)
 * [ThreadLocal在项目中的运用](https://gitee.com/mengban0727/phenix/blob/master/java/ThreadLocal在项目中的运用.md)
-* [Lombok注解@Builder不会生成默认无参构造方法.md](https://gitee.com/mengban0727/phenix/blob/master/java/Lombok注解@Builder不会生成默认无参构造方法.md)
+* [Lombok注解@Builder不会生成默认无参构造方法](https://gitee.com/mengban0727/phenix/blob/master/java/Lombok注解@Builder不会生成默认无参构造方法.md)
 #### 设计模式
 * [模板方法去掉重复代码](https://gitee.com/mengban0727/phenix/blob/master/设计模式/模板方法去掉重复代码.md)
 * [模板方法+泛型优化代码](https://gitee.com/mengban0727/phenix/blob/master/设计模式/模板方法+泛型优化代码.md)
