@@ -29,6 +29,7 @@
 
 ## 方案
 * [亿欧后台-长连接分享](https://gitee.com/mengban0727/phenix/blob/master/方案设计/长连接分享.md)
+* [亿欧网-文章自增id被爬虫](https://gitee.com/mengban0727/phenix/blob/master/方案设计/文章自增id被爬虫.md)
 * [亿欧网-缓存一致性问题](https://gitee.com/mengban0727/phenix/blob/master/redis/亿欧网-缓存一致性问题.md)
 
 ## 联系我
