@@ -95,3 +95,9 @@ ORDER BY
 优化后执行耗时200~300ms
 
 ![](../images/mysql_20221228220311.png)
+
+
+
+## 参考
+
+[Mysql深分页问题](https://mp.weixin.qq.com/s?__biz=Mzg3NzU5NTIwNg==&mid=2247495139&idx=1&sn=9dd98a8e09af48440cc5f01d3aafd87e&chksm=cf2232caf855bbdc4ea538550ecde6c575c91a1d1b1c42f3bc6091c715dde1a4a5e90d3f7ce2&token=1627163936&lang=zh_CN&scene=21#wechat_redirect)
