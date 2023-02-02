@@ -329,6 +329,7 @@ lock_data: 23,1,23, 1, 0x6344CBE7, 6281
 
 1. mysql换成更高版本5.7
 2. 改写语句，由于更改索引后，默认是按照updated_at升序，不需要再指定order by updated_at asc
+
 UPDATE index_log SET status=-1,updated_at='2022-11-14 16:33:38.567'  WHERE (creator_id = 205 AND status = 1) limit 1
 
 
