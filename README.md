@@ -3,7 +3,7 @@
 **phoenix**记录平时工作中遇到的问题，解决方案
 
 ## Elasticsearch
-* [线上文章搜索自定义评分-衰减函数](https://gitee.com/mengban0727/phoenix/blob/master/es/线上文章搜索自定义评分-衰减函数.md)
+* [线上文章搜索自定义评分-衰减函数](./es/线上文章搜索自定义评分-衰减函数.md)
 * [线上es不能写入数据-规范数据建模](https://gitee.com/mengban0727/phoenix/blob/master/es/线上es不能写入数据-规范数据建模.md)
 * [实现需求字段值为空排在前面](https://gitee.com/mengban0727/phoenix/blob/master/es/实现需求字段值为空排在前面.md)
 * [线上企业搜索不准优化](https://gitee.com/mengban0727/phoenix/blob/master/es/线上企业搜索不准优化.md)
