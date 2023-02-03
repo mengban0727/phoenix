@@ -1,4 +1,4 @@
-package com.mengban.phoenix.thread;
+package thread;
 
 /**
  * 锁粗化在循环中不适用

@@ -1,4 +1,4 @@
-package com.mengban.phoenix.thread;
+package thread;
 
 /**
  * 共享变量在多线程下不安全

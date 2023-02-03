@@ -1,4 +1,4 @@
-package com.mengban.phoenix.cache;
+package cache;
 
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;

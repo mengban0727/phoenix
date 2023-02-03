@@ -1,4 +1,4 @@
-package com.mengban.phoenix.thread;
+package thread;
 
 import java.util.concurrent.locks.LockSupport;
 
