@@ -19,6 +19,7 @@
 * GET _cluster/allocation/explain 由于集群red，至少有一个主分片没分配，使用该命令查看未分配的原因是由于磁盘空间不够创建新的索引时分片分配失败
 
 * GET _cat/allocation?v 查看每个节点的使用情况，发现其中一个节点使用率快满了，另外两个节点还有一些空间，推测应该是索引分片设置不合理导致数据分配不均衡
+* GET _cat/indices?v 查看集群索引情况
 ```java
   shards disk.indices disk.used disk.avail disk.total disk.percent        node
     36     43.2gb      46.8gb      2.7gb    49.5gb      95    es-cn-tl32mh5zu000oix2x-7f05b6b5-0001
