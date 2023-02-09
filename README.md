@@ -37,8 +37,8 @@
 * [亿欧网-缓存一致性问题](doc/redis/亿欧网-缓存一致性问题.md)
 
 ## 脑图
-* [elasticsearch](http://naotu.baidu.com/file/ac44ddaa91d11b03f9ef1887c6ea7e64?token=f52fc1aa0a75e440)
-* [mysql](http://naotu.baidu.com/file/ccc59abcf12763bfa9a86999360077de?token=d40a5e663be58dc8)
+* [Elasticsearch](doc/images/Elasticsearch.svg)
+* [MySql](doc/images/MySql.svg)
 
 ## 联系我
 欢迎探讨其他技术相关的问题，个人邮箱：**1103820783@qq.com**
