@@ -16,7 +16,9 @@
   }
   ```
 
-* 微信携带code回调前端地址，前端拿着code来获取用户信息，后端通过code拿到access_token，再通过access_token拿到微信用户信息，然后进行登录相关操作。
+![](../images/wx_20230213222539.png)
+
+* 扫码授权登录后，微信会携带code，回调配置的前端地址，然后前端拿着code来获取用户信息，后端通过code拿到access_token，再通过access_token拿到微信用户信息，然后进行登录相关操作。
 
   
 
