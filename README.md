@@ -21,7 +21,7 @@
 * [亿欧网-多线程增量同步数据优化](doc/java/亿欧网-多线程增量同步数据优化.md)
 * [CompletableFuture实际落地场景](doc/java/CompletableFuture实际落地场景.md)
 * [ThreadLocal在项目中的运用](doc/java/ThreadLocal在项目中的运用.md)
-* [亿欧网CPU100%](doc/java/亿欧网CPU100%.md)
+* [亿欧网CPU100%](doc/java/亿欧网CPU100.md)
 
 #### 框架
 * [Lombok注解@Builder不会生成默认无参构造方法](doc/java/Lombok注解@Builder不会生成默认无参构造方法.md)
