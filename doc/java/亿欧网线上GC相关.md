@@ -5,26 +5,26 @@
 * 新生代2g(1.6g+0.2g+0.2g)，老年代1g
 
   ```java
--Xms3072M                                        内存大小
--Xmx3072M                                        内存最大值
--Xmn2048M                                        年轻代大小
--XX:SurvivorRatio=8								 年轻代比例
--XX:MetaspaceSize=256M                           永久代初始大小
--XX:MaxMetaspaceSize=256M                        永久代最大值
--XX:+UseParNewGC						         新生代并行回收器 
--XX:+UseConcMarkSweepGC   						 老年代CMS收集器
--XX:+PrintGCDetails 						     打印gc日志
--XX:+PrintGCDateStamps                           打印gc时间
--Xloggc:gc.log								     gc日志存放路径
--XX:+HeapDumpOnOutOfMemoryError					 程序崩溃dump内存
--XX:HeapDumpPath=/user/local/app/oom			 oom文件存放地址-文件夹必须存在
+  -Xms3072M                                        内存大小
+  -Xmx3072M                                        内存最大值
+  -Xmn2048M                                        年轻代大小
+  -XX:SurvivorRatio=8								 年轻代比例
+  -XX:MetaspaceSize=256M                           永久代初始大小
+  -XX:MaxMetaspaceSize=256M                        永久代最大值
+  -XX:+UseParNewGC						         新生代并行回收器 
+  -XX:+UseConcMarkSweepGC   						 老年代CMS收集器
+  -XX:+PrintGCDetails 						     打印gc日志
+  -XX:+PrintGCDateStamps                           打印gc时间
+  -Xloggc:gc.log								     gc日志存放路径
+  -XX:+HeapDumpOnOutOfMemoryError					 程序崩溃dump内存
+  -XX:HeapDumpPath=/user/local/app/oom			 oom文件存放地址-文件夹必须存在
 
-//下面参数线上未配置
--XX:CMSInitiatingOccupancyFraction=92 			 老年代指定阈值回收
--XX:+UseCMSCompactAtFullCollection				 回收后整理
--XX:CMSFullGCsBeforeCompaction=0 				 每次回收后压缩
--XX+UseCMSInitiatingOccupancyOnly				 老年代回收设定
--XX:+CMSParallelInitialMarkEnabled				 初始标记多线程执行减少STW
+  //下面参数线上未配置
+  -XX:CMSInitiatingOccupancyFraction=92 			 老年代指定阈值回收
+  -XX:+UseCMSCompactAtFullCollection				 回收后整理
+  -XX:CMSFullGCsBeforeCompaction=0 				 每次回收后压缩
+  -XX+UseCMSInitiatingOccupancyOnly				 老年代回收设定
+  -XX:+CMSParallelInitialMarkEnabled				 初始标记多线程执行减少STW
   ```
 
 
