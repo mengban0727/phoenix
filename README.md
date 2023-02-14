@@ -29,6 +29,8 @@
 * [Lombok注解@Builder不会生成默认无参构造方法](doc/java/Lombok注解@Builder不会生成默认无参构造方法.md)
 * [自定义starter在项目中的实现](doc/java/自定义starter在项目中的实现.md)
 * [亿欧网OAuth2微信登录](doc/java/亿欧网OAuth2微信登录.md)
+* [lua脚本原子性问题](doc/java/lua脚本原子性问题.md)
+
 
 #### 设计模式
 * [模板方法去掉重复代码](doc/设计模式/模板方法去掉重复代码.md)
