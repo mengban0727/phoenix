@@ -41,6 +41,7 @@
 * [亿欧后台-长链接分享](doc/方案设计/长链接分享.md)
 * [亿欧网-文章自增id被爬虫](doc/方案设计/文章自增id被爬虫.md)
 * [亿欧网-缓存一致性问题](doc/redis/亿欧网-缓存一致性问题.md)
+* [短信接口被刷](doc/redis/短信接口被刷.md)
 
 ## 脑图
 * [Elasticsearch](http://naotu.baidu.com/file/ac44ddaa91d11b03f9ef1887c6ea7e64?token=f52fc1aa0a75e440)
