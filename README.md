@@ -9,7 +9,7 @@
 * [线上企业搜索不准优化](doc/es/线上企业搜索不准优化.md)
 * [Elasticsearch在亿欧的多场景应用实践](doc/es/Elasticsearch在亿欧的多场景应用实践.md)
 
-## MySql
+## MySQL
 #### sql优化
 * [亿欧网-sql执行选错驱动表](doc/mysql/亿欧网-sql执行选错驱动表.md)
 * [亿欧网-用子查询优化慢sql](doc/mysql/亿欧网-用子查询优化慢sql.md)
@@ -46,8 +46,10 @@
 
 ## 脑图
 * [Elasticsearch](http://naotu.baidu.com/file/ac44ddaa91d11b03f9ef1887c6ea7e64?token=f52fc1aa0a75e440)
-* [MySql](http://naotu.baidu.com/file/ccc59abcf12763bfa9a86999360077de?token=d40a5e663be58dc8)
+* [MySQL](http://naotu.baidu.com/file/ccc59abcf12763bfa9a86999360077de?token=d40a5e663be58dc8)
 * [Java](http://naotu.baidu.com/file/bf0fb1b0046e88cc1ef7b800361bbf79?token=b30d5a65c9af2c13)
+* [Redis](http://naotu.baidu.com/file/0aa6d7636d7731639e0bfe747a183323?token=00374c776a50efca)
+* [微服务](http://naotu.baidu.com/file/537c1340fbc664836b7b7e17d8a8b759?token=0bb18caa2170437b)
 
 ## 联系我
 欢迎探讨其他技术相关的问题，个人邮箱：**1103820783@qq.com**
