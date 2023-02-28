@@ -192,6 +192,20 @@ reportId类型映射javaType是Integer，我们得找到最开始初始化时cla
 
 
 
+### 对比两张表结构
+
+post_id为无符号int
+
+![](../images/mysql_post_id_unsign_int_20230228172905.png)
+
+
+
+report_id为有符号int
+
+![](../images/mysql_report_id_int_20230228172846.png)
+
+
+
 ### 枚举类型 MysqlType#MysqlType
 
 ```java
