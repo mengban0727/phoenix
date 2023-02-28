@@ -31,6 +31,7 @@
 * [自定义starter在项目中的实现](doc/java/自定义starter在项目中的实现.md)
 * [亿欧网OAuth2微信登录](doc/java/亿欧网OAuth2微信登录.md)
 * [lua脚本原子性问题](doc/redis/lua脚本原子性问题.md)
+* [Mysql的Long和Integer映射问题](doc/java/Mysql的Long和Integer映射问题.md)
 
 
 #### 设计模式
