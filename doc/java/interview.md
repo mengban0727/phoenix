@@ -165,6 +165,7 @@
 
 ## 广州小迈-1面
 
+```java
 ConcurrentHashMap实现有了解吗，讲一讲
 AQS了解吗
 底层是怎么实现的
@@ -188,11 +189,13 @@ abc复合索引，a=1 and b>2 and c = 2,走索引吗，为什么
 ES更新一条数据的过程是怎样的
 倒排索引是怎么实现的
 线上有没有遇到过问题，你印象中比较深的？jvm，es，redis
+```
 
 
 
 ## 广州小迈-2面
 
+```java
 springboot自动装配原理有用过吗？
 为什么要自定义stater
 rest controller和controller有什么区别？
@@ -230,6 +233,7 @@ C端高并发插入接口，怎么提升？mq
 线上频繁full gc，应该怎么做？
 sql题目：一张表，学生ID，课程ID，课程分数，查询每一门成绩大于90的学生ID
 group by。 having min > 90
+```
 
 
 
