@@ -48,6 +48,7 @@
         }else{
           swap(nums,left,right);
           left++;
+          right++;
         }
       }
       swap(nums,left,pivot);
